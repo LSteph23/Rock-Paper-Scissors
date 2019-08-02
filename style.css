@@ -1,0 +1,103 @@
+.game-container {
+    /*	display: flex;*/
+    }
+    
+    .game-section {
+        text-align: center;
+        float: left;
+        height: 200px;
+        width: 33.33%;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+    }
+    
+    .game-section:last-child {
+        border-right: 1px solid #ccc;
+    }
+    
+    #p1-section, #p2-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 0 8px 0;
+    }
+    
+    #outcome-container {
+        font-size: 24px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    #p1-choices, #p2-choices {
+        font-size: 22px;
+    }
+    
+    #you-are-message {
+        display: none;
+    }
+    
+    #game-message {
+        display: none;
+        float: right;
+    }
+    
+    #chat-message {
+        height: 34px;
+    }
+    
+    #player-name {
+        height: 34px;
+    }
+    
+    #message-view {
+        border: 1px solid #ccc;
+        width: 100%;
+        height: 150px;
+        list-style-type: none;
+        padding: 7px 12px 7px 12px;
+        overflow: auto;
+    }
+    
+    .name {
+        font-weight: bold;
+    }
+    
+    .timestamp {
+        float: right;
+        color: #bbb;
+        font-size: 12px;
+    }
+    
+    .alert {
+        font-size: 16px;
+    }
+    
+    .p1-choice:hover, .p2-choice:hover, .p1-choice:active, .p2-choice:active {
+        background: #333;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .p1-name-entered {
+        font-size: 30px;
+        background: red;
+        color: #fff;
+        line-height: 1.6;
+    }
+    
+    .p2-name-entered {
+        font-size: 30px;
+        background: blue;
+        color: #fff;
+        line-height: 1.6;
+    }
+    
+    .p-not-entered {
+        padding-top: 8px;
+    }

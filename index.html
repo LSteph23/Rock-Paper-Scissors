@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+	<title>Rock, Paper, Scissors</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Rock, Paper, Scissors</h1>
+
+		<div id="enter-game-panel" class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Would you like to play?</h3>
+		  </div>
+		  <div class="panel-body">
+		    <form id="player-form" class="form-group">
+		    	<input id="player-name" class="col-xs-10" type="text" placeholder="Name"></input>
+		    	<button id="name-submit-button" class="btn btn-success col-xs-2" type="submit">Start</button>
+		    </form>
+		  </div>
+		</div>
+
+		<div id="you-are-message" class="alert alert-success" role="alert">
+			Hi, <span id="p-name"></span>! You are Player <span id="p-num"></span><span id="game-message"></span>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Play</h3>
+		  </div>
+		  <div class="panel-body">
+		    	<div class="game-section" id="p1-section">
+		    		<div id="p1-name" class="p-not-entered">Waiting for Player 1</div>
+		    		<div id="p1-choices"></div>
+		    		<div id="p1-stats">Wins: <span id="p1-wins">0</span> | Losses: <span id="p1-losses">0</span></div>
+		    	</div>
+		    	<div class="game-section">
+		    		<div id="outcome-container">
+		    			<div id="outcome"></div>
+		    		</div>
+		    	</div>
+		    	<div class="game-section" id="p2-section">
+		    		<div id="p2-name" class="p-not-entered">Waiting for Player 2</div>
+		    		<div id="p2-choices"></div>
+		    		<div id="p1-stats">Wins: <span id="p2-wins">0</span> | Losses: <span id="p2-losses">0</span></div>
+		    	</div>
+		    </div>
+		  </div>
+
+		    <!-- Chat -->
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		        <h3 class="panel-title">Chat</h3>
+		      </div>
+		      <div class="panel-body">
+		        <div class="chat-container">
+		        	<ul id="message-view"></ul>
+		        	<form id="chat-input" class="form-group">
+		        		<input id="chat-message" class="col-xs-10" type="text"></input>
+		        		<button id="send-button" class="btn btn-success col-xs-2" type="submit">Send</button>
+		        	</form>
+		        </div>
+		      </div>
+			</div>
+		</div>
+
+	<!-- jQuery -->
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+
+	<!-- Main js file / logic -->
+	<script src="assets/js/game.js"></script>
+</body>
+</html>
